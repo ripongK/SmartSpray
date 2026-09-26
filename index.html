@@ -31,7 +31,7 @@
     --muted-dim:#66765B;
     --radius:14px;
     --radius-sm:8px;
-    font-size:20px;
+    font-size:19px;
   }
   *{box-sizing:border-box;}
   html,body{margin:0;padding:0;}
@@ -1263,7 +1263,7 @@ function drawEdgesInner(){
     if(e.label){
       const mx = (p1.x+p2.x)/2, my = (p1.y+p2.y)/2, lw = e.label.length*8 + 20;
       lbl = `<g class="dedge-lbl" data-edge="${e.id}"><rect x="${mx-lw/2}" y="${my-11}" width="${lw}" height="22" rx="5" fill="#fff" stroke="${col}"/>`
-          + `<text x="${mx}" y="${my+5}" text-anchor="middle" font-size="13" font-weight="700" fill="${col}">${e.label}</text></g>`;
+          + `<text x="${mx}" y="${my+5}" text-anchor="middle" font-size="12" font-weight="700" fill="${col}">${e.label}</text></g>`;
     }
     return `<line x1="${p1.x}" y1="${p1.y}" x2="${p2.x}" y2="${p2.y}" stroke="${col}" stroke-width="${sel?2.6:1.8}" marker-end="url(#${sel?"dArrowSel":"dArrow"})"/>`
          + `<line class="dedge-hit" data-edge="${e.id}" x1="${p1.x}" y1="${p1.y}" x2="${p2.x}" y2="${p2.y}" stroke="transparent" stroke-width="14"/>` + lbl;
